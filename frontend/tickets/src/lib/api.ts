@@ -3,7 +3,7 @@ interface TicketData {
     description: string,
 }
 
-export type {TicketData};
+export type { TicketData };
 
 export default async function get_all_tickets(): Promise<TicketData[]> {
     return await fetch("http://localhost:8000/tickets")
@@ -12,5 +12,5 @@ export default async function get_all_tickets(): Promise<TicketData[]> {
         })
         .then((data) => {
             return data;
-        }).catch((err) => console.log("ERROR: "+err));
+        }).catch((err) => console.log("ERROR: " + err));
 }
