@@ -19,6 +19,7 @@ gathered during this project.
 - Basics of `XMLHttpRequest` vs `fetch`, preferring `fetch` now
 - `Webpack` loaders, resolve aliases and the copy plugin
 - Basic bootstrap layout
+- `Diesel` basic tutorial with `SQLite`
 
 ## Notes
 - Making typescript work with svelte: [StackOverflow](https://stackoverflow.com/questions/62761623/how-do-you-import-a-svelte-component-in-a-typescript-file)
