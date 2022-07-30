@@ -13,11 +13,24 @@ module.exports = {
       {
         test: /\.css$/,
         use: 'css-loader'
+      },
+      {
+        test: /\.(scss)$/,
+        use: [{
+          loader: 'style-loader', // inject CSS to page
+        }, {
+          loader: 'css-loader', // translates CSS into CommonJS modules
+        }, {
+          loader: 'postcss-loader', // Run post css actions
+        }, {
+          loader: 'sass-loader' // compiles Sass to CSS
+        }]
+
       }
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', ".css", ".scss"],
   },
   devServer: {
     static: {
@@ -30,8 +43,8 @@ module.exports = {
     new CopyPlugin({
       patterns:
         [
-          { 
-            from: './public/*', 
+          {
+            from: './public/*',
             to: path.resolve(__dirname, 'dist', '[name][ext]'),
           }
         ]
