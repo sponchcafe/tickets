@@ -5,6 +5,7 @@ gathered during this project.
 
 ## ToDo
 
+- [x] Setup `Webpack` for `Svelte` and `TypeScript`
 - [ ] Read up on the basics of `Rocket`
 - [ ] Setup a basic database with `Rocket` and `Diesel`
 
@@ -17,6 +18,7 @@ gathered during this project.
 - Typescript type export and import mechanims
 - Basics of `XMLHttpRequest` vs `fetch`, preferring `fetch` now
 - `Webpack` loaders, resolve aliases and the copy plugin
+- Basic bootstrap layout
 
 ## Notes
 - Making typescript work with svelte: [StackOverflow](https://stackoverflow.com/questions/62761623/how-do-you-import-a-svelte-component-in-a-typescript-file)
