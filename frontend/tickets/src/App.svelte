@@ -1,20 +1,15 @@
-<script>
-  let message = "";
-  let code = 0;
-  let x = new XMLHttpRequest();
-  x.open("GET", "http://localhost:8000");
-  x.onload = function(event) {
-    console.log(this.status)
-    console.log(this.response)
-    message = this.responseText;
-    code = this.status;
-  }
-  x.send();
+<script lang="ts">
+  import get_all_tickets from "./lib/api.js";
+  import Ticket from "./lib/Ticket.svelte";
+  let tickets = [];
+  get_all_tickets().then((t) => tickets = t)
 </script>
 
 <main>
   <div>
-    From backend: {message} [{code}]
+    {#each tickets as { title, description }, i}
+      <Ticket {title} {description}></Ticket>
+	  {/each}
   </div>
 </main>
 

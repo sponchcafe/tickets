@@ -28,9 +28,14 @@ fn index() -> &'static str {
     "Hello, world!"
 }
 
+#[get("/tickets")]
+fn tickets() -> &'static str {
+    r#"[{"title": "Task 0", "description": "Serve the first ticket"}]"#
+}
+
 #[launch]
 fn rocket() -> _ {
     rocket::build()
-        .mount("/", routes![index])
+        .mount("/", routes![index, tickets])
         .attach(CORS)
 }
