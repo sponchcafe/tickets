@@ -1,4 +1,4 @@
-# Log
+# DevLog
 
 This is a running log of study items, interesting observations and links
 gathered during this project.
@@ -17,6 +17,11 @@ gathered during this project.
 - Sevlte + TypeScript setup (using recommended vite bundler)
 - Typescript type export and import mechanims
 - Basics of `XMLHttpRequest` vs `fetch`, preferring `fetch` now
+
+
+## Notes
+### Making typescript work with svelte
+- [StackOverflow](https://stackoverflow.com/questions/62761623/how-do-you-import-a-svelte-component-in-a-typescript-file)
 
 ## Links
 

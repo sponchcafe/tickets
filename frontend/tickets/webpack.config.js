@@ -28,8 +28,14 @@ module.exports = {
       },
       {
         test: /\.svelte$/,
-        use: 'svelte-loader',
-        exclude: /node_modules/
+        use: {
+          loader: 'svelte-loader',
+          options: {
+            preprocess: require('svelte-preprocess')({
+              /* options */
+            })
+          }
+        }
       },
       {
         // required to prevent errors from Svelte on Webpack 5+, omit on Webpack 4
@@ -41,33 +47,33 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.svelte', '.js', ".mjs", ".css", ".scss"],
+    extensions: ['.ts', '.js', '.svelte', ".mjs", ".scss"],
     alias: {
       svelte: path.dirname(require.resolve('svelte/package.json'))
     },
     mainFields: ['svelte', 'browser', 'module', 'main']
   },
   devServer: {
-  static: {
-    directory: path.join(__dirname, 'dist'),
+    static: {
+      directory: path.join(__dirname, 'dist'),
     },
-  compress: true,
+    compress: true,
     port: 9000,
   },
-plugins: [
-  new CopyPlugin({
-    patterns:
-      [
-        {
-          from: './public/*',
-          to: path.resolve(__dirname, 'dist', '[name][ext]'),
-        }
-      ]
-  })
-],
+  plugins: [
+    new CopyPlugin({
+      patterns:
+        [
+          {
+            from: './public/*',
+            to: path.resolve(__dirname, 'dist', '[name][ext]'),
+          }
+        ]
+    })
+  ],
   output: {
-  path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
-mode: "development"
+  mode: "development"
 };

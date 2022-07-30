@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import get_all_tickets from "../lib/api.js";
+  import get_all_tickets from "../lib/api";
   import Ticket from "./Ticket.svelte";
-  import type {TicketData} from "../lib/api.js"
+  import type {TicketData} from "../lib/api"
   let tickets: TicketData[] = [];
   onMount(async () => (tickets = await get_all_tickets()));
 </script>

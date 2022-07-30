@@ -1,4 +1,3 @@
-
 import get_all_tickets from "./lib/api";
 import App from './components/App.svelte';
 import "./styles/app";
