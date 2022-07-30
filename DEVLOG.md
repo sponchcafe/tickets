@@ -14,14 +14,12 @@ gathered during this project.
 - Bought _"Effective Typescript"_ by Dan Vanderkam
 - New `cargo add` cli feature
 - Rocket basic setup with CORS headers
-- Sevlte + TypeScript setup (using recommended vite bundler)
 - Typescript type export and import mechanims
 - Basics of `XMLHttpRequest` vs `fetch`, preferring `fetch` now
-
+- `Webpack` loaders, resolve aliases and the copy plugin
 
 ## Notes
-### Making typescript work with svelte
-- [StackOverflow](https://stackoverflow.com/questions/62761623/how-do-you-import-a-svelte-component-in-a-typescript-file)
+- Making typescript work with svelte: [StackOverflow](https://stackoverflow.com/questions/62761623/how-do-you-import-a-svelte-component-in-a-typescript-file)
 
 ## Links
 
