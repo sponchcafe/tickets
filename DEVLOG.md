@@ -29,6 +29,7 @@ Listing stuff I found out tinkering or read about.
 - `Diesel` guides
     - [Schema](https://diesel.rs/guides/schema-in-depth.html)
     - [Composing](https://diesel.rs/guides/composing-applications.html)
+- Migrations
 
 ## Notes
 - Making typescript work with svelte: [StackOverflow](https://stackoverflow.com/questions/62761623/how-do-you-import-a-svelte-component-in-a-typescript-file)
