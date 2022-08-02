@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import get_all_tickets from "../lib/api";
   import Ticket from "./Ticket.svelte";
+  import CreateTicket from "./CreateTicket.svelte";
   import type { TicketData } from "../lib/api";
   let tickets: TicketData[] = [];
   onMount(async () => (tickets = await get_all_tickets()));
@@ -61,6 +62,8 @@
         <a class="nav-link" href=".">Archive</a>
       </nav>
       <div class="col-10 flex-column p-4 flex-wrap bd-highlight">
+        <h3 class="mb-4 border-bottom">Create Ticket</h3>
+        <CreateTicket></CreateTicket>
         <h3 class="mb-4 border-bottom">Backlog</h3>
         <table class="table table-striped">
           <thead class="thead-light">
