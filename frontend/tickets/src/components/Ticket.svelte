@@ -8,6 +8,3 @@
   <td>{upper_title}</td>
   <td>{description}</td>
 </tr>
-
-<style>
-</style>
